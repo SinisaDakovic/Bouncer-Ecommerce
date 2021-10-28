@@ -9,7 +9,7 @@ export default function About() {
             
             <div className="ab_part">
                 <div className="imgShip im">
-                <img src="/ship.png" alt="Truck" width="65px"/>
+                <img src="/ship.png" alt="Truck" width="55px"/>
                 </div>
                 <div className="abTex">
                     <h2>FREE SHIPPING</h2>
@@ -22,7 +22,7 @@ export default function About() {
 
             <div className="ab_part">
                 <div className="imgRef im">
-                    <img src="/ref.png" alt="Refund" height="45px" width="65px"/>
+                    <img src="/ref.png" alt="Refund" height="45px" width="55px"/>
                 </div>
 
                 <div className="abTex">
@@ -36,7 +36,7 @@ export default function About() {
 
             <div className="ab_part">
                 <div className="imgSup im">
-                    <img src="/supp.png" alt="Support" height="45px" width="65px"/>
+                    <img src="/supp.png" alt="Support" height="45px" width="55px"/>
                 </div>
 
                 <div className="abTex">

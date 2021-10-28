@@ -72,6 +72,7 @@ export default function SellingSec() {
         ipad:false,
         accessories:false
     }
+    
 
     useEffect( async () => {
         const datas = await fetching("all");

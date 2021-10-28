@@ -315,9 +315,10 @@ function ProdInfo({match}) {
                 </div>
 
                 <div className="carCon">
-                    {items.slice(0,5).map((itm,id) => {
+                    {items.length > 0 ?
+                    items.slice(0,5).map((itm,id) => {
                         return (
-                            <Link to={itm.prodId} style={{cursor:"pointer", textDecoration:"none", color:"inherit"}}>
+                            <Link to={itm.prodId} style={{cursor:"pointer", textDecoration:"none", color:"inherit"}} key={id}>
 
                             <div className="relCardCon" key={id}>
                                 <div className="relImgCon">
@@ -331,7 +332,9 @@ function ProdInfo({match}) {
                             </div>
                             </Link>
                         )
-                    })}
+                    })
+                : <p>Loading data...</p>
+                }
                 </div>
 
             </div>

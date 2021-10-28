@@ -12,7 +12,7 @@ export default function News() {
                 <div className="new">
                     <div className="newImg">
 
-                        <img src="/newphon.jpg" alt="Phone on the table" width="200px" height="250px"/>
+                        <img src="/newphon.jpg" alt="Phone on the table" width="230px" height="250px"/>
 
                     </div>
 
@@ -27,7 +27,7 @@ export default function News() {
 
                 <div className="newImg">
 
-                    <img src="/laptopnew.jpg" alt="Laptop" width="200px" height="250px"/>
+                    <img src="/laptopnew.jpg" alt="Laptop" width="230px" height="250px"/>
 
                 </div>
 
@@ -43,7 +43,7 @@ export default function News() {
                 <div className="new">
 
                 <div className="newImg">
-                        <img src="/newiph.jpg" alt="iPhone" width="200px" height="250px"/>
+                        <img src="/newiph.jpg" alt="iPhone" width="230px" height="250px"/>
                 </div>
 
                 <div className="newText">

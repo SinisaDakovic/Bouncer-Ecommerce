@@ -11,7 +11,17 @@ export default function Products() {
         speed: 450,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplaySpeed:8000
+        autoplaySpeed:8000,
+        pauseOnHover: true,
+        responsive:[
+            {
+                breakpoint:1150,
+                settings:{
+                    slidesToScroll:1,
+                    slidesToShow:1
+                }
+            }
+        ]
     }
 
     return (
@@ -76,6 +86,7 @@ export default function Products() {
         </Link>
             </div>
             </div>
+
             <div className="prodList">
 
             <div className="prodLista">

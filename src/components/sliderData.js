@@ -18,8 +18,8 @@ export default function sliderOne() {
                 </a>
         </Link>
             </div>
-            <div className="slideImg">
-                <img src="/iphonex.png" alt="iPhone X" width="700px" height="600px"/>
+            <div className="iphImgC">
+                <img src="/iphonex.png" alt="iPhone X" width="700px" height="600px" className="slideImgIph"/>
             </div>
         </div>
     </div>
@@ -42,7 +42,7 @@ export function SliderTwo(){
                 </a>
                 </Link>
             </div>
-            <div className="slideImg">
+            <div className="slideImgMac">
                 <img src="/mac.png" alt="MacBook Pro" width="700px" height="600px"/>
             </div>
             </div>
@@ -67,7 +67,7 @@ export function SliderThree(){
                 </Link>
             </div>
             <div className="slidimg">
-                <img src="/ipadpro.png" alt="iPad Pro" width="500px" height="500px"/>
+                <img src="/ipadpro.png" alt="iPad Pro" width="400px" height="450px"/>
             </div>
             </div>
         </div>
