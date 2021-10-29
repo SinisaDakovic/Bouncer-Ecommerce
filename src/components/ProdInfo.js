@@ -122,6 +122,8 @@ function ProdInfo({match}) {
    const {patch} = useCon();
 
 
+   const [modal, setModal] = useState(false)
+
     return (
         <>
         <div className="prodInfo">
@@ -133,8 +135,8 @@ function ProdInfo({match}) {
                     return (
                         <div className="prdCon" key={id}>
 
-                        <div className="prodImgCon"  height="500px">
-                            <img src={item.prodImg} height="500px" alt=""/>
+                        <div className="prodImgCon"  height="500px" onClick={() => setModal((prev) => !prev)}>
+                            <img src={item.prodImg} className="itemProdImg"/>
                         </div>
 
                         <div className="prodAbtCon">
@@ -314,7 +316,10 @@ function ProdInfo({match}) {
                     <h2>RELATED PRODUCTS</h2>
                 </div>
 
-                <div className="carCon">
+                <div className="carContainer">
+                    <div className="carCon">
+
+                    
                     {items.length > 0 ?
                     items.slice(0,5).map((itm,id) => {
                         return (
@@ -336,7 +341,7 @@ function ProdInfo({match}) {
                 : <p>Loading data...</p>
                 }
                 </div>
-
+                </div>
             </div>
                 </>
     )

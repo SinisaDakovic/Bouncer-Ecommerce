@@ -744,7 +744,9 @@ img{
   display: flex;
   justify-content: space-between;
 }
-
+.itemProdImg{
+  height: 500px;
+}
 .selCen{
   display: flex;
   width: 100%;
@@ -1215,9 +1217,14 @@ margin-bottom: 2em;
 .relHeading h2{
   letter-spacing: 1px;
 }
-.carCon{
+.carContainer{
   width: 80%;
   margin: auto;
+  
+}
+
+.carCon{
+  
   margin-bottom: 5em;
   display: flex;
   justify-content: space-evenly;
@@ -1226,6 +1233,7 @@ margin-bottom: 2em;
   width: 200px;
   height: 200px;
   display: flex;
+  margin: auto;
     justify-content: center;
     align-items: center;
 }
@@ -1271,10 +1279,13 @@ margin-bottom: 2em;
 }
 .filterFetch{
   padding: 1em;
-  background-color: #dfdddd;
+  background-color: #f5f5f5;
   margin-bottom: 1.5em;
   max-width: 1212px;
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  
 }
 .fcon{
   max-width: 1212px;
@@ -1304,6 +1315,7 @@ margin-bottom: 2em;
   column-gap: .5em;
   row-gap: 1em;
   text-align: center;
+  justify-content: center;
 }
 .prdimg{
   display: flex;
@@ -1351,12 +1363,11 @@ margin-bottom: 2em;
   width: 20ch;
 }
 
-.storeAdimg{
-  height: 600px;
-}
+
 .shareOptions{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 3em;
 }
 .fbShare{
@@ -1369,6 +1380,7 @@ margin-bottom: 2em;
   font-size: 1em;
   border-radius: 5px;
   cursor: pointer;
+  
 }
 .twtShare{
 background-color: #40A9F4;
@@ -1380,6 +1392,7 @@ font-weight: bold;
 font-size: 1em;
 border-radius: 5px;
 cursor: pointer;
+
 }
 #socIcs{
   color: #ffffff;
@@ -1419,14 +1432,92 @@ cursor: pointer;
   }
 }
 
+@media (max-width:1730px){
+  .fbShare{
+    width: 100%;
+    margin-bottom: 1em;
+    justify-content: center;
+  }
+  .twtShare{
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 @media (max-width:1710px){
 
   .frsFo{
     row-gap: 30px;
   }
+  .prodInfo{
+    margin-bottom: 14em;
+  }
+  .carCon{
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 40px;
+    row-gap: 30px;
+  }
+}
  
+@media (max-width:1580px){
+  .adsSect{
+    display: none;
+  }
+  .prodInfo{
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width:1550px){
+
+.storeAdText h1{
+  font-size: 2.5em;
+}
+
+.storeAdText p{
+  font-size: 1em;
+}
 
 }
+
+@media (max-width:1530px){
+  .storeAdText h1{
+    font-size: 2em;
+  }
+}
+
+@media (max-width:1515px){
+  .wrp{
+    display: none;
+  }
+  .wprr{
+    width: 100%;
+  }
+  .storeAd{
+    justify-content: space-between;
+  }
+}
+
+@media (max-width:1470px){
+  .storeAdText h1{
+    font-size: 2em;
+  }
+  
+  .storeAdText p{
+    font-size: 1em;
+  }
+  
+}
+
+@media (max-width:1350px){
+  .storeAd{
+    padding-left: 2em;
+  }
+}
+
+
 @media (max-width: 1260px){
   .slideImgMac{
     width: 400px;
@@ -1439,6 +1530,9 @@ cursor: pointer;
   .company{
     text-align: center;
     margin: auto;
+  }
+  .storeAdText{
+    margin-right: 0;
   }
 }
 @media (max-width:1200px){
@@ -1473,6 +1567,24 @@ cursor: pointer;
     justify-content: center !important;
   }
   
+}
+
+@media (max-width:1060px){
+  .prdCon{
+    flex-direction: column;
+    align-items: center;
+  }
+  .prodAbtCon{
+    margin-top: 0;
+    width: 100%;
+  }
+  .fbShare{
+    width: 45%;
+    margin-bottom: 0;
+  }
+  .twtShare{
+    width: 45%;
+  }
 }
 
 @media (max-width:1000px){
@@ -1528,6 +1640,12 @@ cursor: pointer;
     width: 100%;
   }
 }
+@media (max-width:900px){
+  .storeAdimg{
+    position: relative;
+    right: -100px;
+  }
+}
 
 @media (max-width:880px){
   .slidimg{
@@ -1539,6 +1657,10 @@ cursor: pointer;
   }
   .slideText p{
     font-size: .9em;
+  }
+
+  .prodInfo{
+    margin-bottom: 25em;
   }
   
 }
@@ -1555,6 +1677,15 @@ cursor: pointer;
   }
   .adText p{
     font-size: 1em;
+  }
+}
+@media (max-width:800px){
+  .fbShare{
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  .twtShare{
+    width: 100%;
   }
 }
 
@@ -1613,6 +1744,13 @@ cursor: pointer;
     justify-content: space-between;
     padding: 4em 5% 0;
   }
+
+  .itemProdImg{
+    height: 350px;
+  }
+  .filterFetch{
+    justify-content: center;
+  }
 }
 
 @media (max-width:560px){
@@ -1630,6 +1768,24 @@ cursor: pointer;
   .adde{
     background-image: linear-gradient(to bottom, #ffffff 20%, #3A90E5 20% 100%);
   }
+  .prodInfo{
+    margin-bottom: 30em;
+  }
+}
+
+@media (max-width:480px){
+  .storeAdText{
+    position: relative;
+    z-index: 3;
+  }
+  .storeAdimg{
+   position: absolute;
+   right: -55px;
+   top: 55px;
+  }
+  .storeAd{
+    position: relative;
+  }
 }
 
 @media (max-width:470px){
@@ -1642,7 +1798,9 @@ cursor: pointer;
     height: 100%;
   width: 100%;
   }
-  
+  .prodInfo{
+    margin-bottom: 35em;
+  }
   .adcon{
     height: 350px;
   }
@@ -1661,11 +1819,63 @@ cursor: pointer;
 
 }
 
+@media (max-width:450px){
+  .customerOpt{
+    flex-wrap: wrap;
+    margin-bottom: 6em;
+    justify-content: center;
+    row-gap: 20px;
+   
+  }
+  .cart{
+    height: 45px;
+  }
+  .itemProdImg{
+    height: 300px;
+  }
+}
+
 @media (max-width:420px){
   .sellingList{
     margin-bottom: 7em;
   }
   .adde{
     background-image: linear-gradient(to bottom, #ffffff 0%, #3A90E5 0% 100%);
+  }
+}
+
+@media (max-width:380px){
+  .prodInfo{
+    margin-bottom: 45em;
+  }
+  .itemProdImg{
+    height: 270px;
+  }
+}
+
+@media (max-width:360px){
+  .fbShare{
+    font-size: .9em;
+    padding: .5em 1.5em;
+    justify-content: space-evenly;
+  }
+  .twtShare{
+    font-size: .9em;
+    padding: .5em 1.5em;
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width:340px){
+  .storeAdimg{
+    
+    right: -80px;
+    top: 55px;
+   }
+}
+
+@media (max-width:305px){
+  .prodInfo{
+    margin-bottom: 50em;
   }
 }
