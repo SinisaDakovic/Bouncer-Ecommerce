@@ -8,6 +8,7 @@ import {AiOutlineHeart as Heart,AiFillHeart as FHeart} from "react-icons/ai"
 import { useCon } from './Context';
 import {Link} from "react-router-dom"
 import {FaFacebookF as Fb,FaTwitter as Twt} from "react-icons/fa"
+import {ImCross as Cross} from "react-icons/im"
 
 
 function ProdInfo({match}) {
@@ -124,6 +125,16 @@ function ProdInfo({match}) {
 
    const [modal, setModal] = useState(false)
 
+   const closeModal = () => {
+       document.body.classList.remove('hid')
+       setModal(prev => !prev)
+   }
+
+   const openModal = () =>{
+    document.body.classList.add('hid')
+    setModal(prev => !prev)
+   }
+
     return (
         <>
         <div className="prodInfo">
@@ -135,7 +146,14 @@ function ProdInfo({match}) {
                     return (
                         <div className="prdCon" key={id}>
 
-                        <div className="prodImgCon"  height="500px" onClick={() => setModal((prev) => !prev)}>
+                            <div className={modal ? "modalCon zoom" : "modalCon"}>
+                                <div className="crossMod" onClick={() => closeModal()}>
+                                    <Cross/>
+                                </div>
+                                <img src={item.prodImg}/>
+                            </div>
+
+                        <div className="prodImgCon"  height="500px" onClick={() => openModal()}>
                             <img src={item.prodImg} className="itemProdImg"/>
                         </div>
 

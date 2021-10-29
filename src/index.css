@@ -12,6 +12,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
  
 }
+
+.hid{
+  overflow: hidden;
+}
 img{
   max-width: 100%;
   max-height: 100%;
@@ -651,6 +655,9 @@ img{
   flex-direction: column;
   
 }
+.prodImgCon{
+  cursor: pointer;
+}
 .sellProdItem{
   display: flex;
   flex-direction: column;
@@ -852,6 +859,31 @@ img{
   border-radius: 5px;
 
 }
+.crossMod{
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  font-size: 2em;
+  cursor: pointer;
+}
+.modalCon{
+  position: fixed;
+  background-color:rgba(0, 0, 0, .6);
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.modalCon.zoom{
+  display: flex;
+}
+.modalCon.zoom body{
+  overflow: hidden;
+}
+
 
 .tabContCon{
   position: relative;
@@ -1832,6 +1864,10 @@ cursor: pointer;
   }
   .itemProdImg{
     height: 300px;
+  }
+  .crossMod{
+    right: 25px;
+    top: 150px;
   }
 }
 
