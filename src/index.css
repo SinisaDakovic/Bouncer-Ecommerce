@@ -861,8 +861,8 @@ img{
 
 }
 
-.slickTrack{
-  display: flex;
+.slick-track{
+  display: flex !important;
 }
 
 .crossMod{
