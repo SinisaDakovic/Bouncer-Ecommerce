@@ -33,6 +33,7 @@ img{
   font-size: 35px;
   
 }
+
 .frst{
   padding: 1em 10%;
   display: flex;
@@ -859,6 +860,11 @@ img{
   border-radius: 5px;
 
 }
+
+.slickTrack{
+  display: flex;
+}
+
 .crossMod{
   position: absolute;
   right: 50px;
