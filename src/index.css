@@ -1089,10 +1089,12 @@ margin-bottom: 2em;
   font-size: 1.1em;
   
 }
+.mobimg{
+  height: 204px;
+}
 .cart{
   display: flex;
   align-items: center;
-  cursor: pointer;
 }
 .shopCart{
   display: flex;
@@ -1101,6 +1103,7 @@ margin-bottom: 2em;
   background-color: #E9F4FF;
   height: 100%;
   padding: 0 1em;
+  cursor: pointer;
 }
 .shpCrt{
   color: #2657eb;
@@ -1130,10 +1133,43 @@ margin-bottom: 2em;
 .hract{
   opacity: 1;
 }
+.mobileCart{
+  display: none;
+  margin-bottom: 5em;
+  width: 80%;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+.mobProdName{
+  text-align: center;
+}
+.mobItmImg{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mobCart{
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: .5em;
+  width: 100%;
+  justify-content: space-evenly;
+  border-bottom: 1px solid rgba(212, 212, 212, 0.5);
+}
+.itmInfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  row-gap: 20px;
+  column-gap: 30px;
+}
+
 .cartCont{
   width: 70%;
   margin: auto;
-  padding: 10em 0;
+  padding: 6em 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1231,6 +1267,18 @@ margin-bottom: 2em;
   outline: none;
   color: rgb(236, 72, 72);
 }
+
+#mobRemBt{
+  cursor: pointer;
+  background-color: #ffdbdb;
+  border: 1px solid rgb(224, 221, 221);
+  border-radius: 50%;
+  padding: .1em .2em;
+  outline: none;
+  color: rgb(236, 72, 72);
+  
+}
+
 .itTr{
   position: relative;  
 }
@@ -1549,6 +1597,20 @@ cursor: pointer;
   
 }
 
+@media (max-width:1450px){
+  .itemLists{
+    display: none;
+  }
+  .paymentInfo{
+    padding: 0;
+  }
+
+  .mobileCart{
+    display: flex;
+  }
+
+}
+
 @media (max-width:1350px){
   .storeAd{
     padding-left: 2em;
@@ -1700,6 +1762,17 @@ cursor: pointer;
   .prodInfo{
     margin-bottom: 25em;
   }
+  .paymentInfo{
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+  }
+  .total{
+    width: 50%;
+  }
+  .cartCont{
+    width: 100%;
+  }
   
 }
 
@@ -1809,6 +1882,20 @@ cursor: pointer;
   .prodInfo{
     margin-bottom: 30em;
   }
+  #mobRemBt{
+    position: absolute;
+    right: -12px;
+    top: -15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: .3em .3em;
+  }
+  .mobCart{
+    border: 1px solid rgba(212, 212, 212, 0.5);
+  }
+  .itmInfo{
+    flex-direction: column;
+  }
 }
 
 @media (max-width:480px){
@@ -1851,8 +1938,8 @@ cursor: pointer;
     
   }
   .slideText p{
-    font-size: .8em;
-    width: 35ch;
+    font-size: 1em;
+    width: 30ch;
   }
 
 }
@@ -1895,6 +1982,12 @@ cursor: pointer;
   }
 }
 
+@media (max-width:370px){
+  .mobCart{
+    flex-direction: column;
+  }
+}
+
 @media (max-width:360px){
   .fbShare{
     font-size: .9em;
@@ -1907,6 +2000,13 @@ cursor: pointer;
     justify-content: space-evenly;
   }
 }
+
+@media (max-width:350px){
+  #mobitmimg{
+    height: 150px;
+  }
+}
+
 
 @media (max-width:340px){
   .storeAdimg{

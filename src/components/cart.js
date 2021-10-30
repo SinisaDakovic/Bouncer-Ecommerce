@@ -74,6 +74,47 @@ export default function Cart() {
                 </table>
 
             </div>
+
+            <div className="mobileCart">
+            {cart.cart.length === 0 && <><h2>No items added.</h2></>}
+                {
+                    cart.cart.map((item,id) => {
+                        return (
+                            <div className="mobCart">
+                                <button onClick={() => patch({type:"remove", payload:{id:id}})} id="mobRemBt">X</button>
+                                
+                                <div className="mobimg">
+
+                                    <div className="mobItmImg">
+                                        <img src={item.prodImg} id="mobitmimg"/>
+                                    </div>
+
+                                </div>
+
+                            <div className="itmInfo">
+                                <div className="mobProdName">
+                                    <h3>{item.name}</h3>
+                                </div>
+
+                                <div className="itemCount">
+                                <button onClick={() => patch({type:"minus", payload:id})}>-</button>
+                                <p key={id}>{item.qty}</p>
+                                <button onClick={() => patch({type:"plus", payload:id})}>+</button>
+                            </div>
+
+                            <div className="itmPrc">
+                               <p key={id}>${item.prc * item.qty}</p>
+                           </div>
+
+                                </div>    
+
+                               
+
+                            </div>
+                        )
+                    })
+                }
+            </div>
                
             <div className="paymentInfo">
                 
