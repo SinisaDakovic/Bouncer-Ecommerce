@@ -206,6 +206,7 @@ img{
   margin: auto;
   color: #ffffff;
   height: 600px;
+  max-width: 1450px;
 
 }
 .slideText{
@@ -401,6 +402,7 @@ img{
   display: flex;
   align-items: center;
   height: 50px;
+  margin-bottom: 3em;
 }
 #form button{
   background-color: #3A90E5;
@@ -423,6 +425,7 @@ img{
   height: 50px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  outline: none;
   
 }
 
@@ -462,10 +465,7 @@ img{
 .prodLista{
   display: flex;
   justify-content: space-around;
-
-
 }
-
 
 .adcon{
   display: flex;
@@ -473,7 +473,7 @@ img{
   margin: auto;
   justify-content: space-between;
   align-items: center;
-  
+  max-width: 1500px;
 }
 .adText{
   color: #ffffff;
@@ -595,6 +595,39 @@ img{
   text-decoration: none;
   color: #7A7A7A;
 }
+
+.searchedItm{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 80%;
+  margin: auto;
+  max-width: 1500px;
+}
+.itmresultimg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#searchErr{
+  text-align: center;
+}
+
+.itmresult{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #e9e9e9;
+  padding:1em;
+}
+.itmresultabout{
+  text-align: center;
+}
+
 .trdFoo{
   display: flex;
   width: 70%;
@@ -658,6 +691,9 @@ img{
 }
 .prodImgCon{
   cursor: pointer;
+  display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .sellProdItem{
   display: flex;
@@ -727,6 +763,7 @@ img{
   font-weight: bold;
 }
 
+
 .orgNav{
   color: #000000;;
   text-decoration: none;
@@ -753,8 +790,11 @@ img{
   justify-content: space-between;
 }
 .itemProdImg{
-  height: 500px;
+  object-fit: contain;
+  width: 500px;
+  margin-right: 2em;
 }
+
 .selCen{
   display: flex;
   width: 100%;
@@ -831,6 +871,7 @@ img{
   text-align: center;
   width: 250px;
   margin-bottom: .5em;
+  height: 355px !important;
 }
 .adabt h2{
   font-size: 1.2em;
@@ -846,11 +887,11 @@ img{
 #slDt{
   list-style-type: none;
 }
-#slDt li{
-  margin-left: 1em;
+.slick-dots li{
+  margin: 0 15px !important;
   
 }
-#slDt li.slick-active .orgDt{
+.slick-dots li.slick-active .orgDt{
   background-color: #2657eb;
 }
 .orgDt{
@@ -858,7 +899,11 @@ img{
   width: 30px;
   height: 4px;
   border-radius: 5px;
+}
 
+.adImg{
+  display: flex;
+  justify-content: center;
 }
 
 .slick-track{
@@ -1240,6 +1285,33 @@ margin-bottom: 2em;
   text-align: center;
 }
 
+.mobLink{
+  transition: transform 500ms ease-in,
+  opacity 400ms ease-in;
+  transform: translateY(-30px);
+  opacity: 0;
+}
+.activity{
+  transform: translateY(0px);
+  opacity: 1;
+}
+.mobLink:nth-child(2){
+  transition-delay: 200ms;
+}
+
+.mobLink:nth-child(3){
+  transition-delay: 400ms;
+}
+.mobLink:nth-child(4){
+  transition-delay: 600ms;
+}
+.mobLink:nth-child(5){
+  transition-delay: 800ms;
+}
+.mobLink:nth-child(6){
+  transition-delay: 1000ms;
+}
+
 .itmCon td{
   padding: 0 5em;
 }
@@ -1307,6 +1379,33 @@ margin-bottom: 2em;
   width: 80%;
   margin: auto;
   
+}
+
+.error{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 3em;
+}
+.error h2{
+  font-size: 3em;
+  margin-bottom: .2em;
+}
+.error h3{
+  margin-bottom: 1em;
+}
+.error button{
+  padding: .3em 1.3em;
+  cursor: pointer;
+  background-color: #2657eb;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 3px;
 }
 
 .carCon{
@@ -1624,6 +1723,9 @@ cursor: pointer;
     height: 400px;
     align-self: center;
   }
+  .errorImg{
+    width: 40%;
+  }
 }
 
 @media (max-width:1225px){
@@ -1828,6 +1930,9 @@ cursor: pointer;
     height: 250px;
     width: 200px;
   }
+  .errorImg{
+    width: 50%;
+  }
 }
 @media (max-width:605px){
 
@@ -1896,6 +2001,9 @@ cursor: pointer;
   .itmInfo{
     flex-direction: column;
   }
+  .errorImg{
+    width: 70%;
+  }
 }
 
 @media (max-width:480px){
@@ -1941,7 +2049,12 @@ cursor: pointer;
     font-size: 1em;
     width: 30ch;
   }
-
+  .slidimg{
+    height: 200px;
+  }
+  .error h2{
+    font-size: 2em;
+  }
 }
 
 @media (max-width:450px){
@@ -1999,6 +2112,9 @@ cursor: pointer;
     padding: .5em 1.5em;
     justify-content: space-evenly;
   }
+  #searchErr{
+    font-size: 1.3em;
+  }
 }
 
 @media (max-width:350px){
@@ -2014,6 +2130,15 @@ cursor: pointer;
     right: -80px;
     top: 55px;
    }
+}
+
+@media (max-width:325px){
+  .error h2{
+    font-size: 1.5em;
+  }
+  .error h3{
+    font-size: 1em;
+  }
 }
 
 @media (max-width:305px){

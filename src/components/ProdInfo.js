@@ -50,7 +50,7 @@ function ProdInfo({match}) {
       
 
             if(item[0].category === "MacBook"){
-                const res = await fetch(`https://my-prod-api.herokuapp.com/mac`);
+            const res = await fetch(`https://my-prod-api.herokuapp.com/mac`);
             const data = await res.json()
             
             setItems(data);
@@ -82,6 +82,7 @@ function ProdInfo({match}) {
 
     if(fetched){
         fetchRel();
+        setFetched(false);
     }
 
     
@@ -91,7 +92,7 @@ function ProdInfo({match}) {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 800,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay:true,
@@ -284,6 +285,8 @@ function ProdInfo({match}) {
 
                 <Slick {...settings} style={{width:"100%"}}>
 
+                  
+                    <Link to="/home/948c-af43" style={{textDecoration:"none", color:"inherit"}}>
                     <div className="adSlide">
                         <div className="adImg">
                             <img src="/mac.png" alt=""/>
@@ -294,28 +297,33 @@ function ProdInfo({match}) {
                             <p id="pp">$499 <span id="op">$599</span></p>
                         </div>
                     </div>
+                    </Link>
+              
+                <Link to="/home/owre-028x" style={{textDecoration:"none", color:"inherit"}}>
+                    <div className="adSlide">
+                        <div className="adImg">
+                            <img src="/airpodspro.png" alt=""/>
+                        </div>
+                        <div className="adabt">
+                            <h2>AirPods Pro</h2>
+                            <p><span><Star className="star"/><Star className="star"/><Star className="star"/><Star className="star"/><OutlineStar className="starg"/></span></p>
+                            <p id="pp">$499 <span id="op">$599</span></p>
+                        </div>
+                    </div>
+                </Link>
 
+                <Link to="/home/ored-of89" style={{textDecoration:"none", color:"inherit"}}>
                     <div className="adSlide">
                         <div className="adImg">
-                            <img src="/mac.png" alt=""/>
+                            <img src="/tvray.png" alt=""/>
                         </div>
                         <div className="adabt">
-                            <h2>Apple Macbook Pro</h2>
+                            <h2>H-Squared tvTray</h2>
                             <p><span><Star className="star"/><Star className="star"/><Star className="star"/><Star className="star"/><OutlineStar className="starg"/></span></p>
                             <p id="pp">$499 <span id="op">$599</span></p>
                         </div>
                     </div>
-
-                    <div className="adSlide">
-                        <div className="adImg">
-                            <img src="/mac.png" alt=""/>
-                        </div>
-                        <div className="adabt">
-                            <h2>Apple Macbook Pro</h2>
-                            <p><span><Star className="star"/><Star className="star"/><Star className="star"/><Star className="star"/><OutlineStar className="starg"/></span></p>
-                            <p id="pp">$499 <span id="op">$599</span></p>
-                        </div>
-                    </div>
+                </Link>
 
 
             

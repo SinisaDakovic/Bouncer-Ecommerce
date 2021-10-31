@@ -10,7 +10,7 @@ import Context from './components/Context';
 ReactDOM.render(
   <React.StrictMode>
     <Context>
-    <App />
+      <App/>
     </Context>
   </React.StrictMode>,
   document.getElementById('root')

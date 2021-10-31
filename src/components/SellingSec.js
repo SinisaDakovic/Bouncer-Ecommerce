@@ -13,7 +13,7 @@ export default function SellingSec() {
     const res = await fetch(`https://my-prod-api.herokuapp.com/${itm}`);
     const data = await res.json();
     setState(data)
-    console.log(data)
+   
     return data;
     }
 
@@ -22,14 +22,13 @@ export default function SellingSec() {
     function loadMore(){
     
         setStatus(() => {
-            console.log(status)
+            
             return {...status,spc: status.spc < state.length ? status.spc + 8 : 8, vis: status.spc + 8 >= state.length ? false : true}
         })
         
     }
 
     const [state, setState] = useState([])
-    console.log(state.length)
    
 
 

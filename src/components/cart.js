@@ -1,5 +1,7 @@
 import React from 'react'
 import { useCon } from './Context'
+import ScrollToTopOnMount from './ScrollToTop';
+
 
 export default function Cart() {
 
@@ -9,7 +11,7 @@ export default function Cart() {
 
     return (
         <div className="cartCont">
-            
+            <ScrollToTopOnMount/>
           <div className="itemLists">
         
                 <table className="itmCon">
