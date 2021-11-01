@@ -105,14 +105,14 @@ const Nav = () =>{
             </div>
 
             <div>
-                <div className = {hamb ? "phoneNav showNav" : "phoneNav"} key={Math.random()}>
+                <div className = {hamb ? "phoneNav showNav" : "phoneNav"}>
                 <ul className ="phoneList">
-                    <li className={hamb ? "mobLink activity" : ""} key={Math.random()}><Link to="/" className={active.home ? "orgNav activ" : "orgNav"} onClick={() => dispatch({type:ACTIONS.HOME})}>HOME</Link></li>
-                    <li className={hamb ? "mobLink activity" : ""} key={Math.random()}><Link to="/store" className={active.store ? "orgNav activ" : "orgNav"} onClick={() => dispatch({type:ACTIONS.STORE})}>STORE</Link></li>
-                    <li className={hamb ? "mobLink activity" : ""} key={Math.random()}><Link to="/iphone" className={active.iphone ? "orgNav activ" : "orgNav"} onClick={() => dispatch({type:ACTIONS.IPHONE})}>IPHONE</Link></li>
-                    <li className={hamb ? "mobLink activity" : ""} key={Math.random()}><Link to="/ipad" className={active.ipad ? "orgNav activ" : "orgNav"} onClick={() => dispatch({type:ACTIONS.IPAD})}>IPAD</Link></li>
-                    <li className={hamb ? "mobLink activity" : ""} key={Math.random()}><Link to="/macbook" className={active.macbook ? "orgNav activ" : "orgNav"} onClick={() => dispatch({type:ACTIONS.MAC})}>MACKBOOK</Link></li>
-                    <li className={hamb ? "mobLink activity" : ""} key={Math.random()}><Link to="/accessories" className={active.accessories ? "orgNav activ" : "orgNav"} onClick={() => dispatch({type:ACTIONS.ACCESS})}>ACCESSORIES</Link></li>
+                    <li><Link to="/" className={active.home ? "orgNav activ" : "orgNav"} onClick={() => dispatch({type:ACTIONS.HOME})}>HOME</Link></li>
+                    <li><Link to="/store" className={active.store ? "orgNav activ" : "orgNav"} onClick={() => dispatch({type:ACTIONS.STORE})}>STORE</Link></li>
+                    <li><Link to="/iphone" className={active.iphone ? "orgNav activ" : "orgNav"} onClick={() => dispatch({type:ACTIONS.IPHONE})}>IPHONE</Link></li>
+                    <li><Link to="/ipad" className={active.ipad ? "orgNav activ" : "orgNav"} onClick={() => dispatch({type:ACTIONS.IPAD})}>IPAD</Link></li>
+                    <li><Link to="/macbook" className={active.macbook ? "orgNav activ" : "orgNav"} onClick={() => dispatch({type:ACTIONS.MAC})}>MACKBOOK</Link></li>
+                    <li><Link to="/accessories" className={active.accessories ? "orgNav activ" : "orgNav"} onClick={() => dispatch({type:ACTIONS.ACCESS})}>ACCESSORIES</Link></li>
                 </ul>
                 </div>
 

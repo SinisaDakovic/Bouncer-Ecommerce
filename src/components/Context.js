@@ -8,7 +8,16 @@ export default function Context({children}) {
     function creducer(state, action){
         switch(action.type){
             case "addItem":
-                return {...state, cart:[...state.cart,{...action.payload.itm, qty:action.payload.val}]};
+                if(state.cart.find((item) =>
+                    {
+                        return  item.name === action.payload.itm.name 
+                    })){
+
+                    return {...state, cart:state.cart.map((item) => {
+                        return {...item,qty:item.qty + 1}
+                    })};
+
+                }else  return {...state, cart:[...state.cart,{...action.payload.itm, qty:action.payload.val}]};
 
 
             case "remove": 
@@ -42,7 +51,7 @@ export default function Context({children}) {
     const [cart, patch] = useReducer(creducer,{
         cart:[]
     });
-    
+    console.log(cart)
     return (
         <cartContext.Provider value={{cart,patch}}>
             {children}

@@ -1285,33 +1285,6 @@ margin-bottom: 2em;
   text-align: center;
 }
 
-.mobLink{
-  transition: transform 500ms ease-in,
-  opacity 400ms ease-in;
-  transform: translateY(-30px);
-  opacity: 0;
-}
-.activity{
-  transform: translateY(0px);
-  opacity: 1;
-}
-.mobLink:nth-child(2){
-  transition-delay: 200ms;
-}
-
-.mobLink:nth-child(3){
-  transition-delay: 400ms;
-}
-.mobLink:nth-child(4){
-  transition-delay: 600ms;
-}
-.mobLink:nth-child(5){
-  transition-delay: 800ms;
-}
-.mobLink:nth-child(6){
-  transition-delay: 1000ms;
-}
-
 .itmCon td{
   padding: 0 5em;
 }
